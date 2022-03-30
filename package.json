@@ -1,7 +1,7 @@
 {
-  "name": "adoption_system",
+  "name": "agencia",
   "version": "1.0.0",
-  "description": "Adoption system to c/s",
+  "description": "agencia to c/s",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gabiman123/adoption_system.git"
+    "url": "git+https://github.com/fernandosolis448/proyectofinalagencia"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,7 @@
     "nodemon": "^2.0.15"
   },
   "bugs": {
-    "url": "https://github.com/Gabiman123/adoption_system/issues"
+    "url": "https://github.com/fernandosolis448/proyectofinalagencia/issues"
   },
-  "homepage": "https://github.com/Gabiman123/adoption_system#readme"
+  "homepage": "https://github.com/fernandosolis448/proyectofinalagencia#readme"
 }
