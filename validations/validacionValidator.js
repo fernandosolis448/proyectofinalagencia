@@ -1,9 +1,9 @@
 const { check, validationResult } = require('express-validator');
 
 const generatevalidacionValidators = () => [
-    check('user_id').notEmpty().isNumeric().withMessage("Invalid user_id"),
-    check('pet_id').notEmpty().isNumeric().withMessage("Invalid pet_id"),
-    check('date').notEmpty().isDate().withMessage("invalid date")
+    check('cliente_id').notEmpty().isNumeric().withMessage("Invalid cliente_id"),
+    check('auto_id').notEmpty().isNumeric().withMessage("Invalid auto_id"),
+    check('date').notEmpty().isDate().withMessage("invalid fecha")
 ]
 
 const generateIdValidators = () => [
@@ -12,11 +12,10 @@ const generateIdValidators = () => [
 
 const updatevalidacionValidators = () => [
     check('id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('user_id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('pet_id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('date').notEmpty().withMessage(" date").isDate().withMessage("invalid date")
+    check('cliente_id').notEmpty().isNumeric().withMessage("Invalid cliente_id"),
+    check('auto_id').notEmpty().isNumeric().withMessage("Invalid auto_id"),
+    check('date').notEmpty().isDate("date").withMessage("invalid fecha")
 ]
-
 const reporter = (req,res,next) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
