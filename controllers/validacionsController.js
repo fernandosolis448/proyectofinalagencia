@@ -40,7 +40,7 @@ controller.getvalidacion = (req, res) =>
 	});
 };
 
-controller.getvalidacionByUser = (req, res) =>
+controller.getvalidacionBycliente = (req, res) =>
 {
     const sql = "SELECT * FROM validacions INNER JOIN autos ON autos.id = validacions.auto_id INNER JOIN clientes ON clientes.id = validacions.clientes_id WHERE validacions.clientes_id = ?";
 	req.getConnection((error,conn) => {
@@ -54,7 +54,7 @@ controller.getvalidacionByUser = (req, res) =>
         }
         else
         {
-            conn.query(sql, [req.query.user_id] ,(err, results) =>{
+            conn.query(sql, [req.query.cliente_id] ,(err, results) =>{
                 if(err)
                 {
                     format.code = 400;
