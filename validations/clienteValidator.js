@@ -1,10 +1,11 @@
 const { check, validationResult } = require('express-validator');
 
 const generateclienteValidators = () => [
-    check('name').notEmpty().isLength({max:50}).withMessage("Invalid name"),
-    check('lastname').notEmpty().isLength({max:50}).withMessage("Invalid lastname"),
-    check('phone').notEmpty().isLength({min:10, max:50}).isNumeric().withMessage("Invalid phone (10 numbers)"),
-    check('address').notEmpty().isLength({max:150}).withMessage("Invalid address"),
+    check('nombre').notEmpty().isLength({max:34}).withMessage("Invalid nombre"),
+    check('primer apellido').notEmpty().isLength({max:50}).withMessage("Invalid primer apellido"),
+    check('segundo apellido').notEmpty().isLength({max:50}).withMessage("Invalid segundo apellido"),
+    check('direccion').notEmpty().isLength({max:150}).withMessage("Invalid direccion"),
+    check('edad').notEmpty().isNumeric({max:150}).withMessage("Invalid edad"),
 ]
 
 const generateIdValidators = () => [
@@ -13,10 +14,11 @@ const generateIdValidators = () => [
 
 const updateclienteValidators = () => [
     check('id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('name').notEmpty().isLength({max:50}).withMessage("Invalid name"),
-    check('lastname').notEmpty().isLength({max:50}).withMessage("Invalid lastname"),
-    check('phone').notEmpty().isLength({min:10, max:50}).isNumeric().withMessage("Invalid phone (10 numbers)"),
-    check('address').notEmpty().isLength({max:150}).withMessage("Invalid address"),
+    check('nombre').notEmpty().isLength({max:34}).withMessage("Invalid nombre"),
+    check('primer apellido').notEmpty().isLength({max:50}).withMessage("Invalid primer apellido"),
+    check('segundo apellido').notEmpty().isLength({max:50}).withMessage("Invalid segundo apellido"),
+    check('direccion').notEmpty().isLength({max:150}).withMessage("Invalid direccion"),
+    check('edad').notEmpty().isNumeric({max:150}).withMessage("Invalid edad"),
 ]
 
 const reporter = (req,res,next) => {
