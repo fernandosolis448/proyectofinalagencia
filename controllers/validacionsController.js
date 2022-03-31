@@ -3,7 +3,7 @@ let format = require("../format").format;
 
 controller.getvalidacion = (req, res) =>
 {
-    const sql = "SELECT * FROM validacions INNER JOIN pets ON autos.id = validacions.auto_id INNER JOIN clientes ON clientes.id = validacions.clientes_id  WHERE validacions.id = ?";
+    const sql = "SELECT * FROM validacions INNER JOIN autos ON autos.id = validacions.auto_id INNER JOIN clientes ON clientes.id = validacions.cliente_id  WHERE validacions.id = ?";
 	req.getConnection((error,conn) => {
         if(error)
         {
