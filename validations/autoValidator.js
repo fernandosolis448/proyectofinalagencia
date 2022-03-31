@@ -4,7 +4,7 @@ const generateautoValidators = () => [
     check('Marca').notEmpty().isLength({max:45}).withMessage("Invalid Marca"),
     check('ano').notEmpty().isNumeric({max:20}).withMessage("Invalid ano"),
     check('precio').notEmpty().isLength({max:30}).withMessage("Invalid precio"),
-    check('descripcion').notEmpty().isLength({max:100}).withMessage("Invalid descripcion"),
+    check('descripcion').notEmpty().isLength({max:150}).withMessage("Invalid descripcion"),
 ]
 
 const generateIdValidators = () => [
@@ -16,7 +16,7 @@ const updateautoValidators = () => [
     check('Marca').notEmpty().isLength({max:50}).withMessage("Invalid alias"),
     check('ano').notEmpty().isLength({max:20}).withMessage("Invalid auto"),
     check('precio').notEmpty().isLength({max:30}).withMessage("Invalid predcio"),
-    check('discrepcion').notEmpty().isLength({max:100}).withMessage("Invalid discrepcion"),
+    check('descripcion').notEmpty().isLength({max:150}).withMessage("Invalid descripcion"),
 ]
 
 const reporter = (req,res,next) => {
