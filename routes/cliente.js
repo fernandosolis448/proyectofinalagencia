@@ -5,10 +5,10 @@ const clienteValidator = require('../validations/clienteValidator');
 const jwtToken = require("../validations/jwtValidation");
 
 router.get('/cliente', jwtToken.ValidateToken, clientesController.getcliente);
-router.get('/clientes', jwtToken.ValidateToken, clientesController.getclientes);
-router.post('/cliente' , jwtToken.ValidateToken, clienteValidator.add, clientesController.postcliente);
+router.get('/clientes', clientesController.getclientes);
+router.post('/cliente' , clienteValidator.add, clientesController.postcliente);
 router.post('/login', jwtToken.ValidateToken, clienteValidator.id,clientesController.getLogin);
-router.put('/cliente', jwtToken.ValidateToken, clienteValidator.update, clientesController.putcliente);
-router.delete('/cliente', jwtToken.ValidateToken, clienteValidator.id , clientesController.deletecliente);
+router.put('/cliente', clienteValidator.update, clientesController.putcliente);
+router.delete('/cliente', clienteValidator.id , clientesController.deletecliente);
 
 module.exports = router;
